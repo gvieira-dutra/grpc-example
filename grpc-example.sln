@@ -12,9 +12,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "grpc-usecase.ServiceDefaults", "grpc-usecase.ServiceDefaults\grpc-usecase.ServiceDefaults.csproj", "{02A6ECE2-83D6-4DF1-962B-AAB93E06EB90}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RecipeManager", "RecipeManager", "{33EE7D1D-8A04-4930-ACEF-1097F6F1456B}"
-	ProjectSection(SolutionItems) = preProject
-		MyNotes.md = MyNotes.md
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AllergenCheck", "AllergenCheck", "{D696B343-EB1C-42BC-9328-C72A0BABB887}"
 EndProject
@@ -25,6 +22,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{15110325-23B6-41E0-9718-6888C4FCC57C}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		MyNotes.md = MyNotes.md
 		README.md = README.md
 	EndProjectSection
 EndProject
