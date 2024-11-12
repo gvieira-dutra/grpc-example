@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "grpc-usecase.AppHost", "grpc-usecase.AppHost\grpc-usecase.AppHost.csproj", "{8296C65D-0E97-4873-ABBF-8A5FFC1A64BE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aspire", "Aspire", "{2F8F1C57-31D0-4C1C-93A9-D672D6C3886D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{31B06F65-542C-448C-B3D8-4592B19318A1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "grpc-usecase.ServiceDefaults", "grpc-usecase.ServiceDefaults\grpc-usecase.ServiceDefaults.csproj", "{02A6ECE2-83D6-4DF1-962B-AAB93E06EB90}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RecipeManager", "RecipeManager", "{33EE7D1D-8A04-4930-ACEF-1097F6F1456B}"
+	ProjectSection(SolutionItems) = preProject
+		MyNotes.md = MyNotes.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AllergenCheck", "AllergenCheck", "{D696B343-EB1C-42BC-9328-C72A0BABB887}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AllergenCheck.Grpc", "Services\AllergenCheck\AllergenCheck.Grpc\AllergenCheck.Grpc.csproj", "{A83F2D68-F895-4640-8E07-08472668F0ED}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecipeManager.Api", "Services\RecipeManager\RecipeManager.Api\RecipeManager.Api.csproj", "{71BC31A4-57DD-4B3F-A773-9D01041647E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8296C65D-0E97-4873-ABBF-8A5FFC1A64BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8296C65D-0E97-4873-ABBF-8A5FFC1A64BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8296C65D-0E97-4873-ABBF-8A5FFC1A64BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8296C65D-0E97-4873-ABBF-8A5FFC1A64BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02A6ECE2-83D6-4DF1-962B-AAB93E06EB90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02A6ECE2-83D6-4DF1-962B-AAB93E06EB90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02A6ECE2-83D6-4DF1-962B-AAB93E06EB90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02A6ECE2-83D6-4DF1-962B-AAB93E06EB90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A83F2D68-F895-4640-8E07-08472668F0ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A83F2D68-F895-4640-8E07-08472668F0ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A83F2D68-F895-4640-8E07-08472668F0ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A83F2D68-F895-4640-8E07-08472668F0ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71BC31A4-57DD-4B3F-A773-9D01041647E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71BC31A4-57DD-4B3F-A773-9D01041647E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71BC31A4-57DD-4B3F-A773-9D01041647E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71BC31A4-57DD-4B3F-A773-9D01041647E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8296C65D-0E97-4873-ABBF-8A5FFC1A64BE} = {2F8F1C57-31D0-4C1C-93A9-D672D6C3886D}
+		{02A6ECE2-83D6-4DF1-962B-AAB93E06EB90} = {2F8F1C57-31D0-4C1C-93A9-D672D6C3886D}
+		{33EE7D1D-8A04-4930-ACEF-1097F6F1456B} = {31B06F65-542C-448C-B3D8-4592B19318A1}
+		{D696B343-EB1C-42BC-9328-C72A0BABB887} = {31B06F65-542C-448C-B3D8-4592B19318A1}
+		{A83F2D68-F895-4640-8E07-08472668F0ED} = {D696B343-EB1C-42BC-9328-C72A0BABB887}
+		{71BC31A4-57DD-4B3F-A773-9D01041647E4} = {33EE7D1D-8A04-4930-ACEF-1097F6F1456B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6A5AD7D7-FA8A-4C61-89B7-5852D812BBFD}
+	EndGlobalSection
+EndGlobal

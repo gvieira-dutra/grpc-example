@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+option csharp_namespace = "AllergenService.Grpc";
+
+package allergen;
+
+// The Allergen service definition.
+service AllergenCheckProtoService{
+	rpc GetAllergen(GetAllergenRequest) returns (AllergenModel);
+	rpc CreateAllergen(CreateAllergenRequest) returns (AllergenModel);
+	rpc UpdateAllergen (UpdateAllergenRequest) returns (AllergenModel);
+	rpc DeleteAllergen(DeleteAllergenRequest) returns (DeleteAllergenResponse);
+}
+
+message AllergenModel{
+	int32 Id = 1;
+	string IngredientName = 2;
+	int32 SeverityLevel = 3;
+	string Descrip = 4;
+}
+
+message GetAllergenRequest{
+	string IngredientName = 1;
+}
+
+message CreateAllergenRequest{
+	AllergenModel Allergen = 1;
+}
+
+message UpdateAllergenRequest{
+	AllergenModel Allergen = 1;
+}
+
+message DeleteAllergenRequest{
+	AllergenModel Allergen = 1;
+}
+
+message DeleteAllergenResponse{
+	bool succes = 1;
+}
