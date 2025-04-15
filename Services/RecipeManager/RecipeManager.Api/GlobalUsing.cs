@@ -1,12 +1,9 @@
-﻿global using Microsoft.AspNetCore.Mvc;
-
-global using FluentValidation;
-global using MediatR;
-global using Mapster;
-global using Grpc;
+﻿global using AllergenService.Grpc;
 global using Carter;
+global using FluentValidation;
+global using Mapster;
 global using Marten;
-
-global using RecipeManager.Api.Exceptions;
+global using MediatR;
 global using RecipeManager.Api.Entities;
-global using RecipeManager.Api.Data;
+global using RecipeManager.Api.Exceptions;
+global using RecipeManager.Api.Services;

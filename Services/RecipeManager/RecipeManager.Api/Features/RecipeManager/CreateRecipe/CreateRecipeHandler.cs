@@ -1,13 +1,11 @@
-﻿using AllergenService.Grpc;
+﻿namespace RecipeManager.Api.Features.RecipeManager.CreateRecipe;
 
-namespace RecipeManager.Api.Features.RecipeManager.CreateRecipe;
-
-public sealed record CreateRecipeCommand(string RecipeName, List<Ingredient> Ingredients) : IRequest<CreateRecipeResult>;
+public sealed record CreateRecipeCommand(string RecipeName, List<Ingredient> Ingredients)
+    : IRequest<CreateRecipeResult>;
 
 public sealed record CreateRecipeResult(string RecipeName);
 
-public sealed class CreateRecipeCommandValidator 
-    : AbstractValidator<CreateRecipeCommand>
+public sealed class CreateRecipeCommandValidator : AbstractValidator<CreateRecipeCommand>
 {
     public CreateRecipeCommandValidator()
     {
@@ -19,11 +17,14 @@ public sealed class CreateRecipeCommandValidator
 }
 
 public sealed class CreateRecipeHandler(
-    IRecipeManagerRepository repo, 
-    AllergenCheckProtoService.AllergenCheckProtoServiceClient allergenService)
-    : IRequestHandler<CreateRecipeCommand, CreateRecipeResult>
+    IRecipeManagerRepository repo,
+    AllergenCheckProtoService.AllergenCheckProtoServiceClient allergenService
+) : IRequestHandler<CreateRecipeCommand, CreateRecipeResult>
 {
-    public async Task<CreateRecipeResult> Handle(CreateRecipeCommand command, CancellationToken cancellationToken)
+    public async Task<CreateRecipeResult> Handle(
+        CreateRecipeCommand command,
+        CancellationToken cancellationToken
+    )
     {
         var recipe = command.Adapt<Recipe>();
 
@@ -38,18 +39,20 @@ public sealed class CreateRecipeHandler(
     {
         recipe.AllergenInfo = "Potential Allergen Info:";
 
-        foreach(var item in recipe.Ingredients)
+        foreach (var item in recipe.Ingredients)
         {
             var isAllergen = await allergenService.GetAllergenAsync(
-                new GetAllergenRequest
-                {
-                    IngredientName = item.IngredientName.ToUpper()
-                },
-                cancellationToken: cancellationToken);
+                new GetAllergenRequest { IngredientName = item.IngredientName.ToUpper() },
+                cancellationToken: cancellationToken
+            );
 
             if (isAllergen.IngredientName != "Not Found")
             {
-                recipe.AllergenInfo += " " + isAllergen.IngredientName + " is an allergen with Severity Level: " + isAllergen.SeverityLevel;
+                recipe.AllergenInfo +=
+                    " "
+                    + isAllergen.IngredientName
+                    + " is an allergen with Severity Level: "
+                    + isAllergen.SeverityLevel;
             }
         }
     }

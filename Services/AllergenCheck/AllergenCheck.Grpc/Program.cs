@@ -14,6 +14,10 @@ app.MapDefaultEndpoints();
 app.UseSqliteMigration();
 app.MapGrpcService<AllergenCheckService>();
 
-app.MapGet("/", () => "Grpc endpoints must receive communication from Grpc clients. To learn more visit: https://go.microsoft.com/fwlink/?linkid=2086909");
+app.MapGet(
+    "/",
+    () =>
+        "Grpc endpoints must receive communication from Grpc clients. To learn more visit: https://go.microsoft.com/fwlink/?linkid=2086909"
+);
 
 app.Run();

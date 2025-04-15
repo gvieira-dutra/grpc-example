@@ -1,4 +1,4 @@
-﻿namespace RecipeManager.Api.Data;
+﻿namespace RecipeManager.Api.Services;
 
 public interface IRecipeManagerRepository
 {
